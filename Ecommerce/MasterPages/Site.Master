@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Ecommerce.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../Styles/Styles.css" rel="stylesheet" type="text/css" />
+    </head>
+<body>
+    <form id="form1" runat="server">
+    <div class="page">
+        <div class="header">
+            
+            <div class="logo">
+                
+                <asp:Image ID="Image1" runat="server" Height="100px" 
+                    ImageUrl="~/Images/carrinho_de_compras.png" />
+                
+            </div>
+            <div class="title">
+                <h1>
+                    E-COMMERCE S2B
+                </h1>
+            </div>
+            <div class="carrinhoCompras">
+            
+<asp:ImageButton ID="imgCarrinho" runat="server" 
+                                ImageUrl="~/Images/carrinho.png" onclick="imgCarrinho_Click" Width="30px" />
+                            <br />
+                            <asp:LinkButton ID="lnkCarrinho" runat="server" ForeColor="White" 
+                                onclick="lnkCarrinho_Click"></asp:LinkButton>
+            
+            </div>
+            <div class="clear hideSkiplink">
+                <div class="menu bubplastic horizontal blue">
+                    <ul>
+                        <li><span class="menu_r"><a href="/Cadastro.aspx"><span class="menu_ar">Meu Cadastro</span></a></span></li>
+		                <li><span class="menu_r"><a href="/Carrinho.aspx"><span class="menu_ar">Meu Carrinho</span></a></span></li>
+		                <li><span class="menu_r"><a href="/Pedidos.aspx"><span class="menu_ar">Meus Pedidos</span></a></span></li>
+		                <li><span class="menu_r"><a href="/Produtos.aspx"><span class="menu_ar">Produtos</span></a></span></li>
+                    </ul>
+                    <br class="clearit" />
+                </div>                            
+            </div>
+            
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        <table style="width:100%;">
+            <tr>
+                <td align="center" style="width: 100%">
+                    <table style="width: 300px;">
+                        <tr>
+                            <td style="width: 100px">
+                                <asp:Image ID="imgBoleto" runat="server" ImageUrl="~/Images/boleto.gif" 
+                                    Width="32px" />
+                            </td>
+                            <td style="width: 100px">
+                                <asp:Image ID="imgVisa" runat="server" ImageUrl="~/Images/visa.png" />
+                            </td>
+                            <td style="width: 100px">
+                                <asp:Image ID="imgMCard" runat="server" ImageUrl="~/Images/mastercard.png" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Boleto</td>
+                            <td>
+                                Visa</td>
+                            <td>
+                                Master Card</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
